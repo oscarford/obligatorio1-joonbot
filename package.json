@@ -1,0 +1,14 @@
+{
+  "name": "joonbot",
+  "version": "1.0.0",
+  "description": "Obligatorio 1 Diseño Web 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oscar Ford",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3"
+  }
+}

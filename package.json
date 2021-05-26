@@ -9,6 +9,7 @@
   "author": "Oscar Ford",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta3"
+    "bootstrap": "^5.0.0-beta3",
+    "modern-normalize": "^1.1.0"
   }
 }

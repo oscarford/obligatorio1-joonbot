@@ -1,5 +1,4 @@
-@import "variables";
-
+@import "variables-custom";
 
 // Configuration
 @import "../node_modules/bootstrap/scss/functions";
@@ -46,40 +45,40 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
-body{
-    font-family: Avenir,sans-serif;
-}
-
-a {
-    &#login:hover {
-        color: $light;
-    }
-}
-
-@media (min-width: 576px) {
-    .nav-container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .nav-container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .nav-container {
-        max-width: 992px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .nav-container {
-        max-width: 1140px;
-    }
-}
-
-.nav-container {
+%transition {
     transition: all .2s cubic-bezier(1, 0.35, 0.06, 0.69);
 }
+
+body {
+    font-family: Avenir, sans-serif;
+
+    a {
+        &#login:hover {
+            color: $light;
+        }
+    }
+
+    .container {
+        @extend %transition;
+
+        .custom-width {
+            @extend %transition;
+
+            @include media-breakpoint-up(md) {
+                margin: auto;
+                max-width: 540px;
+            }
+        }
+    }
+}
+
+// #prueba1{
+//     width: 100%;
+//     height: 50px;
+//     background-color: aqua;
+// }
+// #prueba2{
+//     width: 100%;
+//     height: 50px;
+//     background-color:cadetblue;
+// }

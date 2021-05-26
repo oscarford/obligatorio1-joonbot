@@ -6,4 +6,6 @@
 4. `sass --watch sass/styles.scss:css/styles.css --style compressed`
 5. `git status`
 6. `git add -A`
-6. `git commit -m "..."`
+7. `git commit -m "..."`
+8. `git config --local core.autocrlf false`
+9. `npm install modern-normalize`

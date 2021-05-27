@@ -1,5 +1,9 @@
 // Colores
+$primary: hsl(354, 82%, 61%);
+$secondary: hsl(354, 82%, 85%);
+$info: rgb(6, 73, 249);
 $light: #F3ECE2;
+$card-cap-bg: rgba(#F3ECE2, .2);
 
 $grid-breakpoints: (xs: 0,
     sm: 576px,
@@ -28,4 +32,8 @@ $spacers: (0: 0,
     10: $spacer * 5.5,
     11: $spacer * 6,
     12: $spacer * 6.5,
+    13: $spacer * 7,
+    14: $spacer * 7.5,
+    15: $spacer * 8,
+    16: $spacer * 8.5,
 );

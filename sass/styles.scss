@@ -70,6 +70,17 @@ body {
             }
         }
     }
+    #design {
+        .card-header {
+            background: rgba(#F3ECE2, .2);
+            ;
+            background: -webkit-linear-gradient(to left, #FFFFFF, rgba(#F3ECE2, .4));
+            background: linear-gradient(to left, #FFFFFF, rgba(#F3ECE2, .4));
+        }
+        .card{
+            border: none;
+        }
+    }
 }
 
 // #prueba1{

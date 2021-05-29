@@ -1,9 +1,34 @@
 // Colores
 $primary: hsl(354, 82%, 61%);
 $secondary: hsl(354, 82%, 85%);
+$success:  #198754;
 $info: rgb(6, 73, 249);
+$warning: #ffc107;
+$danger: #dc3545;
 $light: #F3ECE2;
-$card-cap-bg: rgba(#F3ECE2, .2);
+$dark: #212529;
+$card-cap-bg: rgba(#F3ECE2, 0.3);
+$build-color: hsl(182, 85%, 33%);
+$analyze-color: #9013FE;
+$connect-color: #32b92d;
+$target-color: rgb(246, 117, 192);
+$design-color: orange;
+
+$theme-colors: ("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "build": $build-color,
+    "analyze": $analyze-color,
+    "connect": $connect-color,
+    "target": $target-color,
+    "design": $design-color,
+);
+
 
 $grid-breakpoints: (xs: 0,
     sm: 576px,
@@ -37,3 +62,7 @@ $spacers: (0: 0,
     15: $spacer * 8,
     16: $spacer * 8.5,
 );
+$card-spacer-y: $spacer / 2;
+$card-spacer-x: $spacer / 2;
+$card-cap-padding-y: $spacer / 4;
+$card-cap-padding-x: $spacer / 2;

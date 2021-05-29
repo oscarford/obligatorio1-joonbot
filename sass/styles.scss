@@ -49,6 +49,18 @@
     transition: all .2s cubic-bezier(1, 0.35, 0.06, 0.69);
 }
 
+%border-card {
+    .card {
+        border: none;
+    }
+}
+
+@mixin custom-gradient($main-color-gradient, $opacity-main-color, $secondary-color-gradient, $opacity-second-color, $direction) {
+    background: rgba($main-color-gradient, $opacity-main-color);
+    background: -webkit-linear-gradient(to $direction, rgba($secondary-color-gradient, $opacity-second-color), rgba($main-color-gradient, $opacity-main-color));
+    background: linear-gradient(to $direction, rgba($secondary-color-gradient, $opacity-second-color), rgba($main-color-gradient, $opacity-main-color));
+}
+
 body {
     font-family: Avenir, sans-serif;
 
@@ -70,15 +82,62 @@ body {
             }
         }
     }
-    #design {
+
+    #design,
+    #target,
+    #analyze {
+        @extend %border-card;
+
         .card-header {
-            background: rgba(#F3ECE2, .2);
-            ;
-            background: -webkit-linear-gradient(to left, #FFFFFF, rgba(#F3ECE2, .4));
-            background: linear-gradient(to left, #FFFFFF, rgba(#F3ECE2, .4));
+            @include custom-gradient (#F4F1EB, 0.7, #FFFFFF, 1, left);
         }
-        .card{
+    }
+
+    #build,
+    #connect {
+        @extend %border-card;
+
+        .card-header {
+            @include custom-gradient (#F4F1EB, 0.7, #FFFFFF, 1, right);
+        }
+    }
+
+    footer {
+        .list-group-item-action {
+            width: 100%; // For `<button>`s (anchors become 100% by default though)
+            color: $dark;
+            text-align: inherit; // For `<button>`s (anchors inherit)
+
+            // Hover state
+            &:hover,
+            &:focus {
+                z-index: 1; // Place hover/focus items above their siblings for proper border styling
+                color: $primary;
+                text-decoration: none;
+                background-color: $dark;
+                @extend %transition;
+            }
+
+            &:active {
+                color: $light;
+                padding-left: $list-group-item-padding-x;
+                background-color: $primary;
+                @extend %transition;
+            }
+        }
+
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: $list-group-item-padding-y 0;
+            color: $light;
+            text-decoration: if($link-decoration==none, null, none);
+            background-color: $dark;
             border: none;
+
+            & {
+                border-radius: inherit !important;
+            }
         }
     }
 }

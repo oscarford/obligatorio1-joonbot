@@ -6,6 +6,7 @@ $info: rgb(6, 73, 249);
 $warning: #ffc107;
 $danger: #dc3545;
 $light: #F3ECE2;
+$gray: #6c757d;
 $dark: #212529;
 $card-cap-bg: rgba(#F3ECE2, 0.3);
 $build-color: hsl(182, 85%, 33%);
@@ -22,6 +23,7 @@ $theme-colors: ("primary": $primary,
     "danger": $danger,
     "light": $light,
     "dark": $dark,
+    "gray": $gray,
     "build": $build-color,
     "analyze": $analyze-color,
     "connect": $connect-color,

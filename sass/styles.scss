@@ -120,7 +120,7 @@ body {
 
             &:active {
                 color: $light;
-                padding-left: $list-group-item-padding-x;
+                padding-left: 0.2rem;
                 background-color: $primary;
                 @extend %transition;
             }
@@ -138,6 +138,29 @@ body {
             & {
                 border-radius: inherit !important;
             }
+        }
+
+        .social {
+            a {
+                padding: 0;
+                margin: 0 3rem;
+                i {
+                    position: absolute;
+                    top: -14%;
+                    left: 26%;
+                    @extend %transition;
+
+                    &:hover {
+                        color: $primary;
+                    }
+
+                    &:active {
+                        font-size: 90%;
+                        color: $secondary;
+                    }
+                }
+            }
+
         }
     }
 }

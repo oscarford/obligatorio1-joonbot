@@ -22,3 +22,4 @@
 3. Card
 4. List group
 5. Popover
+6. Acordion

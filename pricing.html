@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,64 +8,836 @@
 			@charset "UTF-8";
 			@import url(https://fonts.googleapis.com/css?family=Avenir:400,700);
 		</style>
-		<link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
+		<!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" /> -->
+		<link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
 		<link rel="stylesheet" href="css/styles.css" />
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" defer></script>
 		<title>Scale your business with custom chatbots | Joonbot</title>
 	</head>
-<body>
-    <header class="bg-light">
-        <div class="nav-container container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">JOONBOT</a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <div class="ms-auto navbar-nav d-flex align-items-center">
-                            <ul class="navbar-nav text-center">
-                                <li class="nav-item">
-                                    <a class="nav-link mb-2 mb-lg-0 me-lg-3" aria-current="page" href="product-tour.html">Product tour</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link mb-2 mb-lg-0 me-lg-3" href="templates.html">Templates</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link  active mb-2 mb-lg-0 me-lg-3" href="pricing.html">Pricing</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link mb-2 mb-lg-0 me-lg-3" href="#">Help</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link mb-2 mb-lg-0 me-lg-3" href="#">Blog</a>
-                                </li>
-                            </ul>
-                            <ul class="navbar-nav text-center">
-                                <li class="nav-item">
-                                    <button type="button" class="btn btn-sm btn-outline-dark navbar-btn mb-3 mb-lg-0 me-lg-3">
-                                        <a id="login" class="nav-link" href="#">Log in</a>
-                                    </button>
-                                </li>
-                                <li class="nav-item">
-                                    <button type="button" class="btn btn-sm btn-dark navbar-btn">
-                                        <a class="nav-link text-light" href="#">Get started</a>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-</body>
+	<body>
+		<header class="sticky-top">
+			<div class="nav-container bg-light">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light container">
+					<div class="container-fluid">
+						<a class="navbar-brand fs-3" href="#">JOONBOT</a>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarNav"
+							aria-controls="navbarNav"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<div class="ms-auto navbar-nav d-flex align-items-center">
+								<ul class="navbar-nav text-center">
+									<li class="nav-item">
+										<a class="nav-link mb-2 mb-lg-0 me-lg-3" href="product-tour.html"
+											>Product tour</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link mb-2 mb-lg-0 me-lg-3" href="templates.html">Templates</a>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link active mb-2 mb-lg-0 me-lg-3"
+											aria-current="page"
+											href="pricing.html"
+											>Pricing</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link mb-2 mb-lg-0 me-lg-3" href="#">Help</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link mb-2 mb-lg-0 me-lg-3" href="#">Blog</a>
+									</li>
+								</ul>
+								<ul class="navbar-nav text-center">
+									<li class="nav-item">
+										<button
+											type="button"
+											class="btn btn-sm btn-outline-dark navbar-btn mb-3 mb-lg-0 me-lg-3"
+										>
+											<a id="login" class="nav-link" href="#">Log in</a>
+										</button>
+									</li>
+									<li class="nav-item">
+										<button type="button" class="btn btn-sm btn-dark navbar-btn">
+											<a class="nav-link text-light" href="#">Get started</a>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section id="presentation" class="bg-light pt-11 pb-8">
+				<div class="container">
+					<h1 class="text-center display-3 lh-base mb-0 px-3 pt-11 pb-10">Simple and predictable pricing</h1>
+				</div>
+			</section>
+			<section id="price-options" class="bg-light pb-4">
+				<div class="container">
+					<div class="row">
+							<div class="card px-0 mb-4 col-lg">
+								<div class="card-header text-center pt-5">
+									<h5 class="fs-3 fw-light">Free</h5>
+									<h2 class="display-3 fw-bold my-4">Free</h2>
+									<p class="font-monospace invisible text-muted my-4">
+										Billed yearly<span class="ms-1 px-1 text-primary bg-secondary rounded-1"
+											>2 months free</span
+										>
+									</p>
+									<button
+										type="button"
+										class="btn btn-sm btn-outline-dark navbar-btn my-4 d-inline-block w-100"
+									>
+										<a class="nav-link start-free fs-5" href="#">Start free now</a>
+									</button>
+								</div>
+								<div class="card-body my-5 pb-0">
+									<ul class="list-unstyled text-start">
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">100 conversations</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">1 chatbot</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited blocks per chatbot</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited websites</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Widget format</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Full-page format</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Embed format</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Pre-built templates</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Self-notification</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Recall information</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited loops</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Limited logic jumps</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer pt-4">
+									<div class="row">
+										<p class="col-6 text-start fs-3 fw-light">Free</p>
+										<div class="col-6 text-center">
+											<p class="fs-3 mb-1">
+												$0<span class="font-monospace fs-4 text-muted">/mo</span>
+											</p>
+											<p class="mb-0">
+												<span class="font-monospace text-muted">Billed yearly</span>
+											</p>
+											<p class="invisible w-75 mx-auto text-primary bg-secondary rounded-1">
+												2 months free
+											</p>
+										</div>
+										<div class="col-12">
+											<button
+												type="button"
+												class="btn btn-sm btn-outline-dark navbar-btn my-4 d-inline-block w-100"
+											>
+												<a class="nav-link start-free fs-5" href="#">Start free now</a>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card px-0  mx-lg-2 mx-xl-4 mb-4 col-lg">
+								<div class="card-header text-center pt-5">
+									<h5 class="fs-3 fw-light">Essential</h5>
+									<p class="display-3 my-4">
+										$28<span class="font-monospace text-muted fs-5">/mo</span>
+									</p>
+									<p class="font-monospace text-muted my-4">
+										Billed yearly<span class="ms-1 px-1 text-primary bg-secondary rounded-1"
+											>2 months free</span
+										>
+									</p>
+									<button
+										type="button"
+										class="btn btn-sm btn-build navbar-btn my-4 d-inline-block w-100"
+									>
+										<a class="nav-link fs-5 text-white" href="#">Get Essential now</a>
+									</button>
+								</div>
+								<div class="card-body my-5 pb-0">
+									<ul class="list-unstyled text-start">
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited conversations</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited chatbots</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited blocks per chatbot</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited websites</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Widget format</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Full-page format</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Embed format</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Pre-built templates</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Self-notification</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Recall information</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited loops</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Advanced logic jumps</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">File upload</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Stripe payment</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+											<span class="ms-2 px-1 text-info bg-light fw-bolder">Coming soon!</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Hidden fields </span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">A/B test </span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Calculation </span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Custom goals</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Native email notifications </span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Zapier integration </span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Calendly integration</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Integromat integration</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+											<span class="ms-2 px-1 text-info bg-light fw-bolder">Coming soon!</span>
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer pt-4">
+									<div class="row">
+										<p class="col-6 text-start fs-3 fw-light">Essential</p>
+										<div class="col-6 text-center">
+											<p class="fs-3 mb-1">
+												$28<span class="font-monospace fs-4 text-muted">/mo</span>
+											</p>
+											<p class="mb-0">
+												<span class="font-monospace text-muted">Billed yearly</span>
+											</p>
+											<p class="w-75 mx-auto text-primary bg-secondary rounded-1">
+												2 months free
+											</p>
+										</div>
+										<div class="col-12">
+											<button
+												type="button"
+												class="btn btn-sm btn-build navbar-btn my-4 d-inline-block w-100"
+											>
+												<a class="nav-link fs-5 text-white" href="#">Get Essential now</a>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card px-0 mb-4 col-lg">
+								<div class="card-header text-center pt-5">
+									<h5 class="fs-3 fw-light">Plus</h5>
+									<p class="display-3 my-4">
+										$99<span class="font-monospace text-muted fs-5">/mo</span>
+									</p>
+									<p class="font-monospace text-muted my-4">
+										Billed yearly<span class="ms-1 px-1 text-primary bg-secondary rounded-1"
+											>2 months free</span
+										>
+									</p>
+									<button
+										type="button"
+										class="btn btn-sm btn-build navbar-btn my-4 d-inline-block w-100"
+									>
+										<a class="nav-link fs-5 text-white" href="#">Get Plus now</a>
+									</button>
+								</div>
+								<div class="card-body my-5 pb-0">
+									<ul class="list-unstyled text-start">
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited conversations</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited chatbots</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited blocks per chatbot</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited websites</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Widget format</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Full-page format</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Embed format</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Pre-built templates</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Self-notification</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Recall information</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited loops</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited logic jumps</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">File upload</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Stripe payment</span>
+
+											<span class="ms-2 px-1 text-info bg-light fw-bolder">Coming soon!</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Hidden fields </span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">A/B test </span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Calculation </span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Custom goals</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Native email notifications </span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Zapier integration </span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Calendly integration</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-check2-square text-connect fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Integromat integration</span>
+											<span class="ms-2 px-1 text-info bg-light fw-bolder">Coming soon!</span>
+										</li>
+
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Integrately integration</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Remove Joonbot branding</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Priority support</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Webhooks</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Google Sheets integration </span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Airtable integration</span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+											<span class="ms-2 px-1 text-info bg-light fw-bolder">Coming soon!</span>
+										</li>
+										<li class="d-flex align-items-center py-1">
+											<i class="bi bi-plus-square text-analyze fw-bold fs-4"></i>
+											<span class="ps-2 pe-3">Unlimited custom domain </span>
+											<i
+												class="bi bi-question-square text-danger fs-6 fw-bold"
+												data-bs-trigger="hover focus"
+												data-bs-container="body"
+												data-bs-toggle="popover"
+												data-bs-placement="right"
+												data-bs-content="Nothing to show. It's only a test of 'popover'. For help go to wikipedia."
+											></i>
+										</li>
+									</ul>
+								</div>
+								<div class="card-footer pt-4">
+									<div class="row">
+										<p class="col-6 text-start fs-3 fw-light">Plus</p>
+										<div class="col-6 text-center">
+											<p class="fs-3 mb-1">
+												$99<span class="font-monospace fs-4 text-muted">/mo</span>
+											</p>
+											<p class="mb-0">
+												<span class="font-monospace text-muted">Billed yearly</span>
+											</p>
+											<p class="w-75 mx-auto text-primary bg-secondary rounded-1">
+												2 months free
+											</p>
+										</div>
+										<div class="col-12">
+											<button
+												type="button"
+												class="btn btn-sm btn-build navbar-btn my-4 d-inline-block w-100"
+											>
+												<a class="nav-link fs-5 text-white" href="#">Get Essential now</a>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="py-11">
+				<div class="container bg-light">
+					<div class="row align-items-center py-xl-5">
+						<div class="col-xl">
+							<h1 class="text-center text-xl-start lh-base fw-bolder fs-2 px-3 pt-11 pt-xl-0 mb-4">
+								Boost your conversion rate now
+							</h1>
+							<h2 class="text-center text-xl-start px-5 fs-5 lh-base">
+								Get your access for FREE to build your own chatbot with our chatbot builder.
+							</h2>
+						</div>
+
+						<div class="col-xl">
+							<form>
+								<div class="px-3 mt-4 pb-11 pb-xl-0 px-md-5">
+									<div class="row g-1 custom-width">
+										<div class="col-md">
+											<div class="input-group input-group-lg mb-3">
+												<input
+													type="text"
+													class="form-control"
+													aria-label="Sizing example input"
+													aria-describedby="inputGroup-sizing-lg"
+													placeholder="Your email addres"
+												/>
+											</div>
+										</div>
+										<div class="col-md">
+											<div class="input-group input-group-lg">
+												<input
+													class="btn form-control btn-danger"
+													type="submit"
+													value="Tray it for free"
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="bg-dark">
+				<div class="container">
+					<div class="row text-white gx-3">
+						<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+							<p class="title mb-2 mt-3">PRODUCT</p>
+							<div class="w-50 border-top border-gray"></div>
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action"> Pricing </a>
+								<a href="#" class="list-group-item list-group-item-action">Test maker</a>
+								<a href="#" class="list-group-item list-group-item-action">Survey maker</a>
+								<a href="#" class="list-group-item list-group-item-action">Chatbot builder</a>
+								<a href="#" class="list-group-item list-group-item-action">Chatbot for website</a>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+							<p class="title mb-2 mt-3">USE CASES</p>
+							<div class="w-50 border-top border-gray"></div>
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action">Lead generation</a>
+								<a href="#" class="list-group-item list-group-item-action">Customer support</a>
+								<a href="#" class="list-group-item list-group-item-action">Recruitment</a>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+							<p class="title mb-2 mt-3">FEATURES</p>
+							<div class="w-50 border-top border-gray"></div>
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action">Hidden fields</a>
+								<a href="#" class="list-group-item list-group-item-action">Multiple formats</a>
+								<a href="#" class="list-group-item list-group-item-action">Video recording</a>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+							<p class="title mb-2 mt-3">INTEGRATIONS</p>
+							<div class="w-50 border-top border-gray"></div>
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action">Native integrations</a>
+								<a href="#" class="list-group-item list-group-item-action">Webhooks</a>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 col-lg-6 col-xl-2">
+							<p class="title mb-2 mt-3">RESOURCES</p>
+							<div class="w-50 border-top border-gray"></div>
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action">Blog</a>
+								<a href="#" class="list-group-item list-group-item-action">Help center</a>
+								<a href="#" class="list-group-item list-group-item-action">Developers / API</a>
+								<a href="#" class="list-group-item list-group-item-action">Joonbot vs Collect.chat</a>
+							</div>
+						</div>
+						<div class="col-6 col-md-4 col-lg-6 col-xl-2">
+							<p class="title mb-2 mt-3">COMPANY</p>
+							<div class="w-50 border-top border-gray"></div>
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action">Terms</a>
+								<a href="#" class="list-group-item list-group-item-action">Privacy Policy</a>
+								<a href="#" class="list-group-item list-group-item-action">Contact us</a>
+							</div>
+						</div>
+					</div>
+					<div class="w-75 mx-auto border-top border-gray mt-3"></div>
+					<div class="social text-center pb-4 my-3">
+						<a href="#" class="text-decoration-none text-light fs-2 position-relative"
+							><i class="bi bi-linkedin"></i
+						></a>
+
+						<a href="#" class="text-decoration-none text-light fs-2 position-relative"
+							><i class="bi bi-facebook"></i
+						></a>
+
+						<a href="#" class="text-decoration-none text-light fs-2 position-relative"
+							><i class="bi bi-twitter"></i
+						></a>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<script src="node_modules/masonry-layout/dist/masonry.pkgd.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/popover-start.js"></script>
+	</body>
 </html>

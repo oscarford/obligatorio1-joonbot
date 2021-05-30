@@ -17,7 +17,8 @@
 11. `npm i bootstrap-icons`
 
 # Módulos utilizados
-1. nav
+1. Nav
 2. Input group
 3. Card
 4. List group
+5. Popover

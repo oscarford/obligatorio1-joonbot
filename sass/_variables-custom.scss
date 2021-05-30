@@ -1,5 +1,5 @@
 // Colores
-$primary: hsl(354, 82%, 61%);
+$primary: rgb(237, 74, 90);
 $secondary: hsl(354, 82%, 85%);
 $success:  #198754;
 $info: rgb(6, 73, 249);
@@ -14,6 +14,9 @@ $analyze-color: #9013FE;
 $connect-color: #32b92d;
 $target-color: rgb(246, 117, 192);
 $design-color: orange;
+$navbar-light-active-color: $primary;
+$navbar-light-brand-color: rgba(#000, .9);
+$link-color: rgb(0 0 0 / 80%);
 
 $theme-colors: ("primary": $primary,
     "secondary": $secondary,

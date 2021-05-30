@@ -23,3 +23,4 @@
 4. List group
 5. Popover
 6. Acordion
+7. Tabs

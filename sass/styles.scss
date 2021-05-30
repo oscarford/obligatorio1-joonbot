@@ -69,15 +69,17 @@ body {
             display: block;
             width: 15%;
             margin: auto;
+
             path {
                 fill: $primary !important;
-                
+
             }
         }
 
     }
 
     a {
+
         &#login,
         &.start-free {
             &:hover {
@@ -116,6 +118,17 @@ body {
 
         .card-header {
             @include custom-gradient (#F4F1EB, 0.7, #FFFFFF, 1, right);
+        }
+    }
+
+    #templates {
+        nav {
+            a {
+                &:hover {
+                    color: white;
+                    @extend %transition;
+                }
+            }
         }
     }
 

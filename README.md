@@ -5,7 +5,8 @@
 2. `npm i bootstrap@next --save`
 3. `git init`
 4. `sass --watch sass/styles.scss:css/styles.css --style compressed`
-5. `git status`
+5. `git config --global alias.s "status -sb"`
+`git s` ( = `git status -sb`)
 6. `git add -A`
 7. `git commit -m "..."`
 8. `git config --local core.autocrlf false`
@@ -19,6 +20,8 @@
 13. `git push joonbot master`
 14. `git branch rama-paracumplir`
 15. `git checkout rama-paracumplir`
+16. `git config --global alias.lg "log --oneline --all --decorate --graph"`
+`git lg` ( = `git log --oneline --all --decorate --graph`)
 
 # Módulos utilizados
 1. Nav

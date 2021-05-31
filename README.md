@@ -15,6 +15,9 @@
     [Bootstrap and Masonry](https://getbootstrap.com/docs/5.0/examples/masonry/#:~:text=Bootstrap%20and%20Masonry,grid%20system%20and%20cards%20component.&text=By%20adding%20data%2Dmasonry%3D'%7B,responsive%20grid%20and%20Masonry's%20positioning)
     [Masonry](https://masonry.desandro.com/)
 11. `npm i bootstrap-icons`
+12. `git remote add joonbot https://github.com/oscarford/obligatorio1-joonbot.git`
+13. `git push joonbot master`
+
 
 # Módulos utilizados
 1. Nav

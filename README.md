@@ -23,6 +23,7 @@
 16. `git config --global alias.lg "log --oneline --all --decorate --graph"`
 `git lg` ( = `git log --oneline --all --decorate --graph`)
 17. `git diff rama-paracumplir master`
+18. `git checkout master` `git merge rama-paracumplir`
 
 # Módulos utilizados
 1. Nav

@@ -17,7 +17,8 @@
 11. `npm i bootstrap-icons`
 12. `git remote add joonbot https://github.com/oscarford/obligatorio1-joonbot.git`
 13. `git push joonbot master`
-
+14. `git branch rama-paracumplir`
+15. `git checkout rama-paracumplir`
 
 # Módulos utilizados
 1. Nav

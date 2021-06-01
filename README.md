@@ -25,7 +25,7 @@
 17. `git diff rama-paracumplir master`
 18. `git checkout master` `git merge rama-paracumplir`
 
-# Módulos utilizados
+## Módulos utilizados
 1. Nav
 2. Input group
 3. Card

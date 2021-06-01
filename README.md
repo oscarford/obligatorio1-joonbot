@@ -24,6 +24,7 @@
 `git lg` ( = `git log --oneline --all --decorate --graph`)
 17. `git diff rama-paracumplir master`
 18. `git checkout master` `git merge rama-paracumplir`
+19. `git branch -M principal`
 
 ## Módulos utilizados
 1. Nav
